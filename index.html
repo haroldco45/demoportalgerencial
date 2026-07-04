@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Planes y Precios — Portal Gerencial | Vibras Positivas HM</title>
+
+<!-- Open Graph (obligatorio) -->
+<meta property="og:title" content="Planes y Precios — Portal Gerencial para Distribuidoras">
+<meta property="og:description" content="Instalación en su propio servidor, conexión de solo lectura a su ERP SQL Server y soporte incluido. Planes desde $200.000/mes.">
+<meta property="og:image" content="https://demoportalgerencial.netlify.app/og-demo-portal.png">
+<meta property="og:url" content="https://demoportalgerencial.netlify.app/precios.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Vibras Positivas HM">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Planes y Precios — Portal Gerencial para Distribuidoras">
+<meta name="twitter:image" content="https://demoportalgerencial.netlify.app/og-demo-portal.png">
+
+<style>
+:root{
+  --bg:#0b1020; --panel:#121a30; --panel2:#0e1526; --border:#1e2a48;
+  --text:#dfe7f5; --muted:#8494b8;
+  --gold:#f5b73c; --green:#2fd08c; --red:#ff5d5d; --cyan:#39c3e6;
+  --orange:#ff9d45; --purple:#a98bff; --blue:#4f8cff;
+  --font-num:'Consolas','Courier New',monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,Arial,sans-serif;min-height:100vh}
+.wrap{max-width:1100px;margin:0 auto;padding:36px 20px 20px}
+
+header{text-align:center;margin-bottom:34px}
+header h1{color:var(--gold);font-size:clamp(26px,5vw,40px);letter-spacing:1px}
+header p{color:var(--muted);margin-top:10px;font-size:15px;max-width:640px;margin-left:auto;margin-right:auto}
+.trust{display:flex;justify-content:center;flex-wrap:wrap;gap:8px 22px;margin-top:16px;font-size:12.5px;color:var(--text)}
+.trust span::before{content:'✓ ';color:var(--green);font-weight:700}
+
+.plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-bottom:30px}
+.plan{background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:26px 24px;display:flex;flex-direction:column;position:relative}
+.plan.featured{border-color:var(--gold);box-shadow:0 0 30px rgba(245,183,60,.12)}
+.tag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--bg);font-size:11px;font-weight:700;padding:4px 14px;border-radius:14px;letter-spacing:1px}
+.plan h2{font-size:17px;letter-spacing:1px}
+.plan .para{font-size:12.5px;color:var(--muted);margin:6px 0 16px;min-height:34px}
+.price{font-family:var(--font-num);margin-bottom:2px}
+.price .mensual{font-size:30px;font-weight:700;color:var(--gold)}
+.price .per{font-size:13px;color:var(--muted)}
+.inst{font-size:12.5px;color:var(--muted);margin-bottom:16px}
+.inst b{color:var(--text);font-family:var(--font-num)}
+.plan ul{list-style:none;margin-bottom:20px;flex:1}
+.plan li{font-size:13px;padding:6px 0;border-bottom:1px solid rgba(30,42,72,.5)}
+.plan li::before{content:'✓  ';color:var(--green);font-weight:700}
+.plan li.no{color:var(--muted)}
+.plan li.no::before{content:'—  ';color:var(--muted)}
+.cta{display:block;text-align:center;background:var(--blue);color:#fff;text-decoration:none;padding:12px;border-radius:10px;font-weight:700;font-size:14px}
+.plan.featured .cta{background:var(--gold);color:var(--bg)}
+.cta:hover{opacity:.9}
+
+.panel{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:22px;margin-bottom:18px}
+.panel h3{font-size:13px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:14px;color:var(--gold)}
+.panel p, .panel li{font-size:13.5px;color:var(--text);line-height:1.65}
+.panel ul{margin-left:18px}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
+.mini{font-family:var(--font-num);color:var(--gold)}
+
+.pilot{background:linear-gradient(135deg,rgba(47,208,140,.12),rgba(57,195,230,.08));border:1px solid var(--green);border-radius:14px;padding:22px;text-align:center;margin-bottom:18px}
+.pilot h3{color:var(--green);font-size:16px;margin-bottom:8px}
+.pilot p{font-size:13.5px;color:var(--text);max-width:640px;margin:0 auto}
+
+.footer{text-align:center;color:var(--muted);font-size:11px;padding:22px 0 10px}
+.note{font-size:11.5px;color:var(--muted);text-align:center;margin-top:4px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>PORTAL GERENCIAL</h1>
+  <p>Su distribuidora en tiempo real, desde el celular o el PC. Instalado en su propio servidor, conectado a su ERP SQL Server en modo solo lectura.</p>
+  <div class="trust">
+    <span>Sus datos nunca salen de su empresa</span>
+    <span>No modifica su ERP</span>
+    <span>Soporte por WhatsApp incluido</span>
+  </div>
+</header>
+
+<div class="pilot">
+  <h3>🚀 Prueba piloto con SUS datos reales</h3>
+  <p>Antes de decidir, instalamos el Dashboard conectado a su ERP y usted lo usa <b>15 días sin costo de mensualidad</b>. Si le sirve, seguimos con el plan que elija. Si no, lo retiramos y no queda debiendo nada de mensualidad.</p>
+</div>
+
+<div class="plans">
+
+  <div class="plan">
+    <h2>ESENCIAL</h2>
+    <div class="para">Para empezar a ver su negocio en tiempo real.</div>
+    <div class="price"><span class="mensual">$ 200.000</span> <span class="per">/ mes</span></div>
+    <div class="inst">Instalación única: <b>$ 2.500.000</b></div>
+    <ul>
+      <li>Dashboard gerencial en tiempo real</li>
+      <li>Ventas netas y devoluciones</li>
+      <li>Cartera por edades con semáforo</li>
+      <li>Análisis de vendedores</li>
+      <li class="no">Módulos de inventario</li>
+      <li class="no">Tesorería y proveedores</li>
+      <li class="no">Acceso remoto desde celular</li>
+    </ul>
+    <a class="cta" href="https://wa.me/573117700431?text=Hola%2C%20me%20interesa%20el%20plan%20ESENCIAL%20del%20Portal%20Gerencial">Me interesa este plan</a>
+  </div>
+
+  <div class="plan featured">
+    <div class="tag">MÁS ELEGIDO</div>
+    <h2>PROFESIONAL</h2>
+    <div class="para">Control comercial + inventario: donde está la plata quieta.</div>
+    <div class="price"><span class="mensual">$ 300.000</span> <span class="per">/ mes</span></div>
+    <div class="inst">Instalación única: <b>$ 3.800.000</b></div>
+    <ul>
+      <li>Todo lo del plan Esencial</li>
+      <li>Inventario real valorizado al costo</li>
+      <li>Productos sin movimiento (capital inmovilizado)</li>
+      <li>Sugerido de pedidos automático</li>
+      <li>Pareto de clientes 80/20</li>
+      <li class="no">Tesorería y CXP proveedores</li>
+      <li class="no">Acceso remoto desde celular</li>
+    </ul>
+    <a class="cta" href="https://wa.me/573117700431?text=Hola%2C%20me%20interesa%20el%20plan%20PROFESIONAL%20del%20Portal%20Gerencial">Me interesa este plan</a>
+  </div>
+
+  <div class="plan">
+    <h2>GERENCIAL COMPLETO</h2>
+    <div class="para">Los 10 módulos + su empresa en el bolsillo, donde esté.</div>
+    <div class="price"><span class="mensual">$ 400.000</span> <span class="per">/ mes</span></div>
+    <div class="inst">Instalación única: <b>$ 5.500.000</b></div>
+    <ul>
+      <li>Todo lo del plan Profesional</li>
+      <li>Tesorería: bancos, recaudo y flujo proyectado</li>
+      <li>CXP proveedores con vencimientos</li>
+      <li>Presupuesto de cobro por vendedor</li>
+      <li>Acceso remoto seguro desde celular (con PIN)</li>
+      <li>Alertas de cartera crítica por WhatsApp</li>
+      <li>Prioridad en soporte y nuevas funciones</li>
+    </ul>
+    <a class="cta" href="https://wa.me/573117700431?text=Hola%2C%20me%20interesa%20el%20plan%20GERENCIAL%20COMPLETO%20del%20Portal%20Gerencial">Me interesa este plan</a>
+  </div>
+
+</div>
+
+<div class="grid2">
+  <div class="panel">
+    <h3>¿Qué incluye la instalación?</h3>
+    <ul>
+      <li>Análisis y mapeo de su ERP (tablas de ventas, cartera e inventario)</li>
+      <li>Instalación del sistema en <b>su propio servidor</b></li>
+      <li>Usuario de base de datos de <b>solo lectura</b> — su ERP no se toca</li>
+      <li>Configuración de vendedores, bodegas y filtros de su operación</li>
+      <li>Capacitación al gerente y a quien usted designe</li>
+      <li>Contrato de licencia de uso y acuerdo de confidencialidad</li>
+    </ul>
+  </div>
+  <div class="panel">
+    <h3>¿Qué incluye la mensualidad?</h3>
+    <ul>
+      <li>Soporte directo por WhatsApp en horario laboral</li>
+      <li>Actualizaciones y mejoras del sistema sin costo adicional</li>
+      <li>Ajustes menores de configuración (nuevos vendedores, bodegas)</li>
+      <li>Monitoreo de que el servicio esté funcionando</li>
+    </ul>
+    <p style="margin-top:10px"><b>Módulos adicionales sueltos:</b> <span class="mini">$ 600.000</span> de instalación + <span class="mini">$ 50.000</span>/mes cada uno.</p>
+  </div>
+</div>
+
+<div class="panel">
+  <h3>Complemento: App móvil para sus vendedores</h3>
+  <p>Sus vendedores toman pedidos desde el celular en la calle — con catálogo, precios y cartera del cliente al día — y el pedido entra directo a su ERP. Funciona con o sin señal (sincroniza al recuperar conexión). <b>Instalación <span class="mini">$ 2.000.000</span> + <span class="mini">$ 150.000</span>/mes</b> (hasta 10 vendedores).</p>
+</div>
+
+<div class="panel">
+  <h3>Requisitos técnicos</h3>
+  <p>Servidor o PC con Windows encendido en su empresa · ERP sobre SQL Server (GYG, Siesa, CGUno, World Office u otros) · Internet en la sede. En la visita técnica gratuita confirmamos compatibilidad antes de cualquier pago.</p>
+</div>
+
+<p class="note">Precios en pesos colombianos (COP), año 2026. No incluyen IVA si aplica. Sujetos a visita técnica de compatibilidad.</p>
+
+<div class="footer">Desarrollada por Vibras Positivas HM — Derechos de Autor Reservados</div>
+</div>
+</body>
+</html>
